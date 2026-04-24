@@ -1,26 +1,65 @@
-# Assignment-9-NLTK
+# Assignment 9: NLTK
 
 ## Purpose
-The purpose of this project is to use NLTK to analyze text files. The program applies basic natural language processing techniques like tokenization, stemming, lemmatization, named entity recognition, and trigram analysis. This helps turn unstructured text into useful information.
+The purpose of this project is to use Python and NLTK to analyze text files. Natural Language Processing (NLP) helps computers understand human language by breaking text into smaller parts and finding patterns. :contentReference[oaicite:0]{index=0}  
+
+In this project, I used different techniques like tokenization, stemming, lemmatization, named entity recognition, and trigram analysis to study four different texts.
+
+---
 
 ## How the Program Works
-The program reads four text files and processes them step by step. First, it breaks the text into words (tokenization). Then it removes common words and punctuation to clean the data. After that, it applies stemming and lemmatization to simplify words.
+The program reads each text file and processes it step by step:
 
-It also counts named entities like people or places, and finds the most common word patterns using trigrams. These results are used to understand the topic of each text and compare writing styles.
+- First, it breaks the text into words (tokenization)
+- Then it removes common words and punctuation (cleaning)
+- After that, it simplifies words using stemming and lemmatization
+- It counts named entities like people or places
+- Finally, it finds common 3-word patterns (trigrams)
+
+These steps help turn unstructured text into something easier to understand and compare.
+
+---
 
 ## Results
 
 **Text 1 subject:**  
-This text focuses on horror themes. It includes dark ideas, fear, and strange or supernatural elements.
+This text focuses on horror and dark themes. It includes fear, strange events, and supernatural ideas.
 
 **Text 2 subject:**  
-This text is about a fantasy world. It includes magic, adventure, and different characters or creatures.
+This text is about a fantasy world. It includes magic, adventure, and different characters.
 
 **Text 3 subject:**  
-This text talks about kingdoms, politics, and conflict. It focuses on power, leadership, and relationships between characters.
+This text talks about kingdoms, politics, and power struggles. It focuses on conflict and relationships between characters.
+
+---
 
 ## Text 4 Author Guess
-After comparing trigram patterns, Text 4 seems most similar to Text 3. The writing style, structure, and topics are close, especially the focus on characters and interactions. Because of this, it is likely written by the same author as Text 3.
+Based on trigram patterns and writing style, Text 4 is most similar to Text 3. Both texts focus on similar topics and have a close writing style. Because of this, it is likely that Text 4 was written by the same author as Text 3.
+
+---
+
+## Class Design
+The program uses a class called `TextAnalyzer` to organize the code.
+
+### Attributes
+- `file_name` → stores the file name  
+- `text` → stores the full text  
+- `tokens` → list of words  
+- `cleaned_tokens` → words after cleaning  
+- `stems` → stemmed words  
+- `lemmas` → lemmatized words  
+
+### Methods
+- `read_file()` → reads the file  
+- `preprocess()` → cleans and tokenizes text  
+- `stem_words()` → applies stemming  
+- `lemmatize_words()` → applies lemmatization  
+- `most_common_tokens()` → finds top words  
+- `named_entity_count()` → counts named entities  
+- `trigram_analysis()` → finds common trigrams  
+- `analyze()` → runs full analysis  
+
+---
 
 ## Limitations
-This project uses basic NLP methods, so it may not always be fully accurate. It only looks at word patterns and does not deeply understand meaning or context. A more advanced model could give better results.
+This project uses basic NLP techniques, so it may not always be fully accurate. It only looks at word patterns and not deep meaning. A more advanced model could give better results.
